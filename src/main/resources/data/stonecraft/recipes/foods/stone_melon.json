@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_melon",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "stonecraft:lv2stone"
+    },
+    "$": {
+      "item": "minecraft:melon_slice"
+    }
+  },
+  "result": {
+    "item": "stonecraft:stone_melon",
+    "count": 1
+  }
+}

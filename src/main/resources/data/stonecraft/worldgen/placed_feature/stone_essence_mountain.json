@@ -1,0 +1,27 @@
+{
+  "feature": "stonecraft:stone_essence_ore_small",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 144
+        },
+        "max_inclusive": {
+          "absolute": 248
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

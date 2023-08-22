@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "stonecraft:lv4stone",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "stonecraft:blocks/lv4stone"
+}

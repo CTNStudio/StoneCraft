@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "stonecraft:stone_essence_ore",
+    "stonecraft:deepslate_stone_essence_ore",
+    "stonecraft:lv1stone",
+    "stonecraft:lv2stone",
+    "stonecraft:lv3stone",
+    "stonecraft:lv4stone",
+    "stonecraft:lv5stone",
+    "stonecraft:stone_conversion_table",
+    "stonecraft:stone_crafting_table",
+    "stonecraft:stone_summoner",
+    "stonecraft:activated_stone_summoner"
+  ]
+}

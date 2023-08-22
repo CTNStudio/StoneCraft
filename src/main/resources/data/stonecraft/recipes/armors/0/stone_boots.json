@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_boots",
+  "pattern": [
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  "result": {
+    "item": "stonecraft:stone_boots",
+    "count": 1
+  }
+}

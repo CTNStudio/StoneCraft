@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_conversion_table",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "stonecraft:lv1stone"
+    },
+    "$": {
+      "item": "minecraft:crafting_table"
+    }
+  },
+  "result": {
+    "item": "stonecraft:stone_conversion_table",
+    "count": 1
+  }
+}

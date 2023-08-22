@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "stonecraft",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "Stone Craft",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"CTN STUDIO"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/stonecraft/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"top.ctnstudios.StoneCraft"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"top.ctnstudios.StoneCraftClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"stonecraft.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "stonecraft.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -33,9 +33,13 @@
 		"fabricloader": ">=0.14.21",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": ">=0.86.1+1.20.1"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"quilt-loader": "0.20.0-beta.11"
+	},
+	"breaks": {
+		"quilt-loader": "<0.19.2",
+		"quilted_fabric_api": "<7.1.0+0.86.1-1.20.1"
 	}
 }
