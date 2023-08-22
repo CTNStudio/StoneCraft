@@ -1,5 +1,5 @@
 {
-  "feature": "stonecraft:stone_essence_ore_big",
+  "feature": "stonecraft:ore_stone_essence_big",
   "placement": [
     {
       "type": "minecraft:count",
