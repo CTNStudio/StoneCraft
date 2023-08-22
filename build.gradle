@@ -27,6 +27,12 @@ repositories {
 			includeGroup "mezz.jei"
 		}
 	}
+	maven {
+		url "https://server.bbkr.space/artifactory/libs-release"
+		content {
+			includeGroup "io.github.cottonmc"
+		}
+    }
 }
 
 loom {
@@ -50,8 +56,8 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
+	// jij LibGui
+	include "io.github.cottonmc:LibGui:${project.libgui_version}"
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 	compileOnly "com.klikli_dev:modonomicon-${minecraft_version}-common:${modonomicon_version}"
