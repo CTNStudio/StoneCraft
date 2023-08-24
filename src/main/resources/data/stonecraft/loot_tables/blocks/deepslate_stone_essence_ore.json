@@ -3,7 +3,6 @@
   "pools": [
     {
       "rolls": 1,
-      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -32,6 +31,14 @@
               "name": "stonecraft:raw_stone_essence",
               "functions": [
                 {
+                  "function": "minecraft_set_count",
+                  "count": {
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "minecraft:uniform"
+                  }
+                },
+                {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops"
@@ -45,6 +52,5 @@
         }
       ]
     }
-  ],
-  "random_sequence": "stonecraft:blocks/deepslate_stone_essence_ore"
+  ]
 }

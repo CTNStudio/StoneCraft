@@ -8,7 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
+import static top.ctnstudios.StoneCraft.LOGGER;
 import static top.ctnstudios.StoneCraft.MODID;
 import static top.ctnstudios.registry.Blocks.*;
 import static top.ctnstudios.registry.Items.*;

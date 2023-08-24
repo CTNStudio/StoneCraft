@@ -8,12 +8,13 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import top.ctnstudios.items.CanClearBadEffects;
-import top.ctnstudios.items.Foods;
-import top.ctnstudios.registry.ArmorMaterials.*;
 
 import static top.ctnstudios.StoneCraft.MODID;
 import static top.ctnstudios.registry.Blocks.*;
+
+import top.ctnstudios.items.CanClearBadEffects;
+import top.ctnstudios.items.Foods;
+import top.ctnstudios.registry.ArmorMaterials.*;
 
 public class Items {
     public static final Item STONE_STAR = new Item(new FabricItemSettings().maxCount(64));

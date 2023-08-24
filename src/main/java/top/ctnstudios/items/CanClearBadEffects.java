@@ -9,13 +9,12 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.world.World;
 
+/**
+ * Remove all bad effects.
+ * When player finish using the item, it removes all the player's bad effects on the server.The effect list is from <a href="https://minecraft.fandom.com/wiki/Effect#Effect_list">MINECRAFT Fandom</a>.
+ * @author CTN STUDIO
+ */
 public class CanClearBadEffects extends Item {
-
-    /**
-     * Remove all bad effects.
-     * When player finish using the item, it removes all the player's bad effects on the server.The effect list is from <a href="https://minecraft.fandom.com/wiki/Effect#Effect_list">MINECRAFT Fandom</a>.
-     * @author CTN STUDIO
-     */
     public CanClearBadEffects(Settings settings) {
         super(settings);
     }

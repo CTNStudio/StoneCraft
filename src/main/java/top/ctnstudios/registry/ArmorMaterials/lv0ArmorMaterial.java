@@ -49,6 +49,6 @@ public class lv0ArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0.1F;
+        return 0;
     }
 }

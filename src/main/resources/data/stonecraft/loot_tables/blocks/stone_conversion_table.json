@@ -3,19 +3,17 @@
   "pools": [
     {
       "rolls": 1,
-      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "stonecraft:stone_conversion_table",
-          "conditions": [
-            {
-              "condition": "minecraft:survives_explosion"
-            }
-          ]
+          "name": "stonecraft:stone_conversion_table"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }
-  ],
-  "random_sequence": "stonecraft:blocks/stone_conversion_table"
+  ]
 }
