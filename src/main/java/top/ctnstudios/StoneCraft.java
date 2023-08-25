@@ -3,6 +3,7 @@ package top.ctnstudios;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import top.ctnstudios.registry.Blocks;
 import top.ctnstudios.registry.ItemGroups;
 import top.ctnstudios.registry.Items;
@@ -14,6 +15,7 @@ public class StoneCraft implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -24,5 +26,6 @@ public class StoneCraft implements ModInitializer {
 		Items.init();
 		Blocks.init();
 		ItemGroups.init();
+        Ores.init();
 	}
 }

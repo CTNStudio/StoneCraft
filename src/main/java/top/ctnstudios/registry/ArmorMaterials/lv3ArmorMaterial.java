@@ -44,7 +44,7 @@ public class lv3ArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 0;
+        return 0.1F;
     }
 
     @Override

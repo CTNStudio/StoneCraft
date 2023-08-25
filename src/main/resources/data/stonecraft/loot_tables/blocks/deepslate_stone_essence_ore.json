@@ -31,9 +31,9 @@
               "name": "stonecraft:raw_stone_essence",
               "functions": [
                 {
-                  "function": "minecraft_set_count",
+                  "function": "minecraft:set_count",
                   "count": {
-                    "min": 0.0,
+                    "min": 1.0,
                     "max": 1.0,
                     "type": "minecraft:uniform"
                   }
