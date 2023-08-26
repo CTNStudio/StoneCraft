@@ -1,10 +1,7 @@
 package top.ctnstudios.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -15,6 +12,7 @@ import static top.ctnstudios.registry.Blocks.*;
 import top.ctnstudios.items.CanClearBadEffects;
 import top.ctnstudios.items.Foods;
 import top.ctnstudios.registry.ArmorMaterials.*;
+import top.ctnstudios.registry.ToolMaterials.*;
 
 public class Items {
     public static final Item STONE_STAR = new Item(new FabricItemSettings().maxCount(64));
@@ -72,6 +70,8 @@ public class Items {
     public static final Item LV5_STONE_CHESTPLATE = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings());
     public static final Item LV5_STONE_LEGGINGS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
     public static final Item LV5_STONE_BOOTS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
+    // Pickaxes
+    public static ToolItem LV1_STONE_PICKAXE =new PickaxeItem(lv1ToolMaterial.INSTANCE)
 
     public static void init(){
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_star"), STONE_STAR);
