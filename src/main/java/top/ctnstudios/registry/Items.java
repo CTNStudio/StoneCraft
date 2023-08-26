@@ -71,7 +71,7 @@ public class Items {
     public static final Item LV5_STONE_LEGGINGS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
     public static final Item LV5_STONE_BOOTS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
     // Pickaxes
-    public static ToolItem LV1_STONE_PICKAXE =new PickaxeItem(lv1ToolMaterial.INSTANCE)
+    //public static ToolItem LV1_STONE_PICKAXE =new PickaxeItem(lv1ToolMaterial.INSTANCE)
 
     public static void init(){
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_star"), STONE_STAR);
