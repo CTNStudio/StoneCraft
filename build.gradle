@@ -30,6 +30,12 @@ repositories {
 	maven {
 		url "https://server.bbkr.space/artifactory/libs-release"
     }
+    maven {
+        url "https://api.modrinth.com/maven"
+        content {
+			includeGroup "maven.modrinth"
+		}
+    }
 }
 
 loom {
@@ -52,6 +58,7 @@ dependencies {
 	// Dependencies
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation include("io.github.cottonmc:LibGui:${project.LibGui_version}")
+    modImplementation ("maven.modrinth:Hephaestus:${project.Hephaestus_version}")
 	compileOnly "com.klikli_dev:modonomicon-${minecraft_version}-common:${modonomicon_version}"
 	implementation "com.klikli_dev:modonomicon-${minecraft_version}-fabric:${modonomicon_version}"
 }
