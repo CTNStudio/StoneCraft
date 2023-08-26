@@ -67,7 +67,7 @@ public class Items {
     public static final Item LV4_STONE_CHESTPLATE = new ArmorItem(LV4_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings());
     public static final Item LV4_STONE_LEGGINGS = new ArmorItem(LV4_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
     public static final Item LV4_STONE_BOOTS = new ArmorItem(LV4_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
-    public static final ArmorMaterial LV5_ARMOR_MATERIAL = new lv1ArmorMaterial();
+    public static final ArmorMaterial LV5_ARMOR_MATERIAL = new lv5ArmorMaterial();
     public static final Item LV5_STONE_HELMET = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings());
     public static final Item LV5_STONE_CHESTPLATE = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings());
     public static final Item LV5_STONE_LEGGINGS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
