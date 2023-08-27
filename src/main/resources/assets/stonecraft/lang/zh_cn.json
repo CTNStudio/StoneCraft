@@ -1,4 +1,6 @@
 {
+  "modmenu.nameTranslation.stonecraft": "石头工艺",
+  "modmenu.descriptionTranslation.stonecraft": "还在为挖矿箱子里一堆圆石而烦恼吗？这个模组可以为你解决游戏中前期的贫穷！（当然后期也可以借此飞起）"
   "itemGroup.stonecraft": "石头工艺",
   "item.stonecraft.stone_star": "石头之星",
   "item.stonecraft.head_shard": "头颅残片",
