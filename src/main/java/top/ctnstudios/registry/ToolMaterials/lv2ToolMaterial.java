@@ -5,11 +5,11 @@ import net.minecraft.recipe.Ingredient;
 
 import static top.ctnstudios.registry.Items.LV1STONE_ITEM;
 
-public class lv1ToolMaterial implements ToolMaterial {
-    public static final lv1ToolMaterial INSTANCE = new lv1ToolMaterial();
+public class lv2ToolMaterial implements ToolMaterial {
+    public static final lv2ToolMaterial INSTANCE = new lv2ToolMaterial();
     @Override
     public int getDurability() {
-        return 175;
+        return 227;
     }
     @Override
     public float getMiningSpeedMultiplier() {

@@ -12,6 +12,7 @@ import static top.ctnstudios.registry.Blocks.*;
 import top.ctnstudios.items.CanClearBadEffects;
 import top.ctnstudios.items.Foods;
 import top.ctnstudios.registry.ArmorMaterials.*;
+import top.ctnstudios.registry.Pickaxes.StonePickaxe;
 import top.ctnstudios.registry.ToolMaterials.*;
 
 public class Items {
@@ -71,7 +72,12 @@ public class Items {
     public static final Item LV5_STONE_LEGGINGS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
     public static final Item LV5_STONE_BOOTS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
     // Pickaxes
-    //public static ToolItem LV1_STONE_PICKAXE =new PickaxeItem(lv1ToolMaterial.INSTANCE)
+    public static ToolItem LV1_STONE_PICKAXE =new StonePickaxe(lv1ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV2_STONE_PICKAXE =new StonePickaxe(lv2ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV3_STONE_PICKAXE =new StonePickaxe(lv3ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV4_STONE_PICKAXE =new StonePickaxe(lv4ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV5_STONE_PICKAXE =new StonePickaxe(lv5ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+
 
     public static void init(){
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_star"), STONE_STAR);
@@ -116,6 +122,12 @@ public class Items {
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_chestplate"), LV5_STONE_CHESTPLATE);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_leggings"), LV5_STONE_LEGGINGS);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_boots"), LV5_STONE_BOOTS);
+        // Pickaxes
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone_pickaxe"), LV1_STONE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone_pickaxe"), LV2_STONE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv3stone_pickaxe"), LV3_STONE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv4stone_pickaxe"), LV4_STONE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_pickaxe"), LV5_STONE_PICKAXE);
         // Blocks
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone"), LV1STONE_ITEM);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone"), LV2STONE_ITEM);

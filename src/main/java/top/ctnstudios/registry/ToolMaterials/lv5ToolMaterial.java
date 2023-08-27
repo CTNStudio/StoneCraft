@@ -3,32 +3,32 @@ package top.ctnstudios.registry.ToolMaterials;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-import static top.ctnstudios.registry.Items.LV1STONE_ITEM;
+import static top.ctnstudios.registry.Items.LV5STONE_ITEM;
 
-public class lv1ToolMaterial implements ToolMaterial {
-    public static final lv1ToolMaterial INSTANCE = new lv1ToolMaterial();
+public class lv5ToolMaterial implements ToolMaterial {
+    public static final lv5ToolMaterial INSTANCE = new lv5ToolMaterial();
     @Override
     public int getDurability() {
-        return 175;
+        return 3254;
     }
     @Override
     public float getMiningSpeedMultiplier() {
-        return 5.0F;
+        return 11.0F;
     }
     @Override
     public float getAttackDamage() {
-        return 1.5F;
+        return 5.0F;
     }
     @Override
     public int getMiningLevel() {
-        return 1;
+        return 4;
     }
     @Override
     public int getEnchantability() {
-        return 7;
+        return 20;
     }
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(LV1STONE_ITEM);
+        return Ingredient.ofItems(LV5STONE_ITEM);
     }
 }

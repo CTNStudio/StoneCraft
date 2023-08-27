@@ -1,20 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "lv5stone_boots",
+  "group": "lv5stone_pickaxe",
   "pattern": [
-    "A A",
-    "B B"
+    "AAA",
+    " C ",
+    " B "
   ],
   "key": {
     "A": {
       "item": "stonecraft:lv5stone"
     },
     "B": {
+      "item": "minecraft:stick"
+    },
+    "C": {
       "item": "stonecraft:stone_essence"
     }
   },
   "result": {
-    "item": "stonecraft:lv5stone_boots",
+    "item": "stonecraft:lv5stone_pickaxe",
     "count": 1
   }
 }
