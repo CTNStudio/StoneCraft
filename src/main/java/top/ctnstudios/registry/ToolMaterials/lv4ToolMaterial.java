@@ -13,7 +13,7 @@ public class lv4ToolMaterial implements ToolMaterial {
     }
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8.0F;
+        return 11.0F;
     }
     @Override
     public float getAttackDamage() {

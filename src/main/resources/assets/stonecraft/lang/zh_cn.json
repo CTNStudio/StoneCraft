@@ -53,5 +53,10 @@
   "item.stonecraft.lv5stone_helmet": "五级压缩石头盔",
   "item.stonecraft.lv5stone_chestplate": "五级压缩石胸甲",
   "item.stonecraft.lv5stone_leggings": "五级压缩石护腿",
-  "item.stonecraft.lv5stone_boots": "五级压缩石靴子"
+  "item.stonecraft.lv5stone_boots": "五级压缩石靴子",
+  "item.stonecraft.lv1stone_pickaxe": "一级压缩石镐",
+  "item.stonecraft.lv2stone_pickaxe": "二级压缩石镐",
+  "item.stonecraft.lv3stone_pickaxe": "三级压缩石镐",
+  "item.stonecraft.lv4stone_pickaxe": "四级压缩石镐",
+  "item.stonecraft.lv5stone_pickaxe": "五级压缩石镐"
 }

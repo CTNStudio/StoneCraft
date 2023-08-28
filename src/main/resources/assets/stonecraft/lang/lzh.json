@@ -1,5 +1,6 @@
 {
   "modmenu.nameTranslation.stonecraft": "石藝",
+  "modmenu.descriptionTranslation.stonecraft": "WIP",
   "itemGroup.stonecraft": "石藝",
   "item.stonecraft.stone_star": "石之星",
   "item.stonecraft.head_shard": "首片",
@@ -52,5 +53,10 @@
   "item.stonecraft.lv5stone_helmet": "五階壓石胄",
   "item.stonecraft.lv5stone_chestplate": "五階壓石鎧",
   "item.stonecraft.lv5stone_leggings": "五階壓石護腿",
-  "item.stonecraft.lv5stone_boots": "五階壓石靴"
+  "item.stonecraft.lv5stone_boots": "五階壓石靴",
+  "item.stonecraft.lv1stone_pickaxe": "Compressed Stone Pickaxe Level 1",
+  "item.stonecraft.lv2stone_pickaxe": "Compressed Stone Pickaxe Level 2",
+  "item.stonecraft.lv3stone_pickaxe": "Compressed Stone Pickaxe Level 3",
+  "item.stonecraft.lv4stone_pickaxe": "Compressed Stone Pickaxe Level 4",
+  "item.stonecraft.lv5stone_pickaxe": "Compressed Stone Pickaxe Level 5"
 }

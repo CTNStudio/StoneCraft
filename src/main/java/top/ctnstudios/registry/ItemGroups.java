@@ -71,6 +71,11 @@ public class ItemGroups {
                         entries.add(LV5_STONE_CHESTPLATE);
                         entries.add(LV5_STONE_LEGGINGS);
                         entries.add(LV5_STONE_BOOTS);
+                        entries.add(LV1_STONE_PICKAXE);
+                        entries.add(LV2_STONE_PICKAXE);
+                        entries.add(LV3_STONE_PICKAXE);
+                        entries.add(LV4_STONE_PICKAXE);
+                        entries.add(LV5_STONE_PICKAXE);
                     }).build());
     public static void init(){
         LOGGER.info("Registering Item Group for " + MODID);

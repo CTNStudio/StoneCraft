@@ -24,6 +24,5 @@ public class Ores {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, ORE_STONE_ESSENCE);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, ORE_STONE_ESSENCE_LOWER);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, ORE_STONE_ESSENCE_UPPER);
-        StoneCraft.LOGGER.info("Ores placed.");
     }
 }
