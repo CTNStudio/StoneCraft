@@ -2,24 +2,7 @@ pluginManagement {
     repositories {
         maven { url "https://maven.fabricmc.net/" }
         maven { url "https://maven.neoforged.net/releases/" }
-        maven {
-            url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
-            content {
-                includeGroup "com.klikli_dev"
-            }
-        }
-        maven {
-            url "https://maven.blamejared.com/"
-            content {
-                includeGroup "mezz.jei"
-            }
-        }
-        maven {
-            url "https://api.modrinth.com/maven"
-            content {
-                includeGroup "maven.modrinth"
-            }
-        }
+
         gradlePluginPortal()
     }
 }
