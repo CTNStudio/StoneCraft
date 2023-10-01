@@ -51,5 +51,7 @@ subprojects {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    gitInfo = getGitBranch + getGitHash
+    def gitBranch = getGitBranch
+    def gitHash = getGitHash
+    gitInfo = gitBranch + "-" + gitHash
 }
