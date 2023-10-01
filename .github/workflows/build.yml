@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         # Use these Java versions
-        java: [17.0.8+7,20.0.2+9,]
+        java: [17,20,]
         os: [ubuntu-22.04,]
     runs-on: ${{ matrix.os }}
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: build
         run: ./gradlew build
       - name: capture build artifacts
-        if: ${{ matrix.java == '17.0.8+7' }}
+        if: ${{ matrix.java == '17' }}
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
