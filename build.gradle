@@ -53,5 +53,5 @@ subprojects {
     }
     def gitBranch = getGitBranch
     def gitHash = getGitHash
-    gitInfo = gitBranch  + gitHash
+    def gitInfo = gitBranch  + gitHash
 }
