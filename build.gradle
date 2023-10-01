@@ -16,5 +16,5 @@ def getGitHash = { ->
     return stdout.toString().trim()
 }
 tasks.register('build'){
-    project('platforms:fabric-1.20.1').tasks.build.execute()
+    project('platforms:fabric-1.20.1').tasks.build
 }
