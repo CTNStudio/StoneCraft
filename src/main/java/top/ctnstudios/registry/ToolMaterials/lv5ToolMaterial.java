@@ -1,5 +1,6 @@
 package top.ctnstudios.registry.ToolMaterials;
 
+import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -21,7 +22,7 @@ public class lv5ToolMaterial implements ToolMaterial {
     }
     @Override
     public int getMiningLevel() {
-        return 4;
+        return MiningLevels.NETHERITE;
     }
     @Override
     public int getEnchantability() {

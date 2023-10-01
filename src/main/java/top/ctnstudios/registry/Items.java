@@ -12,7 +12,6 @@ import static top.ctnstudios.registry.Blocks.*;
 import top.ctnstudios.items.CanClearBadEffects;
 import top.ctnstudios.items.Foods;
 import top.ctnstudios.registry.ArmorMaterials.*;
-import top.ctnstudios.registry.Pickaxes.StonePickaxe;
 import top.ctnstudios.registry.ToolMaterials.*;
 
 public class Items {
@@ -72,13 +71,32 @@ public class Items {
     public static final Item LV5_STONE_LEGGINGS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
     public static final Item LV5_STONE_BOOTS = new ArmorItem(LV5_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
     // Pickaxes
-    public static ToolItem LV1_STONE_PICKAXE =new StonePickaxe(lv1ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
-    public static ToolItem LV2_STONE_PICKAXE =new StonePickaxe(lv2ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
-    public static ToolItem LV3_STONE_PICKAXE =new StonePickaxe(lv3ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
-    public static ToolItem LV4_STONE_PICKAXE =new StonePickaxe(lv4ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
-    public static ToolItem LV5_STONE_PICKAXE =new StonePickaxe(lv5ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
-
-
+    public static ToolItem LV1_STONE_PICKAXE =new PickaxeItem(lv1ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV2_STONE_PICKAXE =new PickaxeItem(lv2ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV3_STONE_PICKAXE =new PickaxeItem(lv3ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV4_STONE_PICKAXE =new PickaxeItem(lv4ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    public static ToolItem LV5_STONE_PICKAXE =new PickaxeItem(lv5ToolMaterial.INSTANCE,1,-2.8F,new Item.Settings());
+    // Hoes
+    public static ToolItem LV1_STONE_HOE =new HoeItem(lv1ToolMaterial.INSTANCE,-1,-2.4F,new Item.Settings());
+    public static ToolItem LV2_STONE_HOE =new HoeItem(lv2ToolMaterial.INSTANCE,-1,-2.8F,new Item.Settings());
+    public static ToolItem LV3_STONE_HOE =new HoeItem(lv3ToolMaterial.INSTANCE,-1,-3.2F,new Item.Settings());
+    public static ToolItem LV4_STONE_HOE =new HoeItem(lv4ToolMaterial.INSTANCE,0,0.0F,new Item.Settings());
+    public static ToolItem LV5_STONE_HOE =new HoeItem(lv5ToolMaterial.INSTANCE,0,0.0F,new Item.Settings());
+    // Axes
+    // WARNING TO DO
+    public static ToolItem LV1_STONE_AXE =new AxeItem(lv1ToolMaterial.INSTANCE,7,-3.2F,new Item.Settings());
+    public static ToolItem LV2_STONE_AXE =new AxeItem(lv2ToolMaterial.INSTANCE,9,-2.8F,new Item.Settings());
+    public static ToolItem LV3_STONE_AXE =new AxeItem(lv3ToolMaterial.INSTANCE,-1,-3.2F,new Item.Settings());
+    public static ToolItem LV4_STONE_AXE =new AxeItem(lv4ToolMaterial.INSTANCE,0,0.0F,new Item.Settings());
+    public static ToolItem LV5_STONE_AXE =new AxeItem(lv5ToolMaterial.INSTANCE,5,3.0F,new Item.Settings());
+    // Shovels
+    public static ToolItem LV1_STONE_SHOVEL =new ShovelItem(lv1ToolMaterial.INSTANCE,-1,-2.4F,new Item.Settings());
+    public static ToolItem LV2_STONE_SHOVEL =new ShovelItem(lv2ToolMaterial.INSTANCE,-1,-2.8F,new Item.Settings());
+    public static ToolItem LV3_STONE_SHOVEL =new ShovelItem(lv3ToolMaterial.INSTANCE,-1,-3.2F,new Item.Settings());
+    public static ToolItem LV4_STONE_SHOVEL =new ShovelItem(lv4ToolMaterial.INSTANCE,0,0.0F,new Item.Settings());
+    public static ToolItem LV5_STONE_SHOVEL =new ShovelItem(lv5ToolMaterial.INSTANCE,1.5F,-3.0F,new Item.Settings());
+    // Entity eggs
+    public static final Item STONE_ELDER_SPAWN_EGG = new SpawnEggItem(entities.STONE_ELDER, 0x000000, 0xffffff, new FabricItemSettings());
     public static void init(){
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_star"), STONE_STAR);
         Registry.register(Registries.ITEM, new Identifier(MODID, "head_shard"), HEAD_SHARD);
@@ -128,6 +146,24 @@ public class Items {
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv3stone_pickaxe"), LV3_STONE_PICKAXE);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv4stone_pickaxe"), LV4_STONE_PICKAXE);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_pickaxe"), LV5_STONE_PICKAXE);
+        // Hoes
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone_hoe"), LV1_STONE_HOE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone_hoe"), LV2_STONE_HOE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv3stone_hoe"), LV3_STONE_HOE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv4stone_hoe"), LV4_STONE_HOE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_hoe"), LV5_STONE_HOE);
+        // Axes
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone_axe"), LV1_STONE_AXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone_axe"), LV2_STONE_AXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv3stone_axe"), LV3_STONE_AXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv4stone_axe"), LV4_STONE_AXE);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_axe"), LV5_STONE_AXE);
+        // Shovels
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone_shovel"), LV1_STONE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone_shovel"), LV2_STONE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv3stone_shovel"), LV3_STONE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv4stone_shovel"), LV4_STONE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(MODID, "lv5stone_shovel"), LV5_STONE_SHOVEL);
         // Blocks
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv1stone"), LV1STONE_ITEM);
         Registry.register(Registries.ITEM, new Identifier(MODID, "lv2stone"), LV2STONE_ITEM);
@@ -140,5 +176,7 @@ public class Items {
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_crafting_table"), new BlockItem(STONE_CRAFTING_TABLE, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_summoner"), new BlockItem(STONE_SUMMONER, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "activated_stone_summoner"), new BlockItem(ACTIVE_STONE_SUMMONER, new FabricItemSettings()));
+        // Entity eggs
+        Registry.register(Registries.ITEM, new Identifier(MODID, "stone_elder_spawn_egg"), STONE_ELDER_SPAWN_EGG);
     }
 }

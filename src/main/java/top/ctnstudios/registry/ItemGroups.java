@@ -76,6 +76,7 @@ public class ItemGroups {
                         entries.add(LV3_STONE_PICKAXE);
                         entries.add(LV4_STONE_PICKAXE);
                         entries.add(LV5_STONE_PICKAXE);
+                        entries.add(STONE_ELDER_SPAWN_EGG);
                     }).build());
     public static void init(){
         LOGGER.info("Registering Item Group for " + MODID);
