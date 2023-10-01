@@ -2,11 +2,10 @@ plugins {
     id 'fabric-loom' version '1.4.1'
 }
 
-version = project.mod_version
-group = project.maven_group
+githash = rootProject.getGitHash()
 
 base {
-    archivesName = project.modid + "-fabric"
+    archivesName = project.modid + "-fabric" + githash
 }
 
 loom {
@@ -26,15 +25,15 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    modImplementation ("maven.modrinth:Hephaestus:${project.Hephaestus_version}")
+    modImplementation "maven.modrinth:Hephaestus:${project.Hephaestus_version}"
     compileOnly "com.klikli_dev:modonomicon-${project.minecraft_version}-common:${project.modonomicon_version}"
     implementation "com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}"
 }
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property "version", rootProject.version
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": rootProject.version
     }
 }
 
@@ -43,33 +42,10 @@ java {
     // if it is present.
     // If you remove this line, sources will not be generated.
     withSourcesJar()
-
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
     from("LICENSE") {
         rename { "${it}_${project.base.archivesName.get()}"}
-    }
-}
-repositories {
-    maven {
-        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
-        content {
-            includeGroup "com.klikli_dev"
-        }
-    }
-    maven {
-        url "https://maven.blamejared.com/"
-        content {
-            includeGroup "mezz.jei"
-        }
-    }
-    maven {
-        url "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
-        }
     }
 }
