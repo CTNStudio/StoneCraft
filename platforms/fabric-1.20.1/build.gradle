@@ -2,10 +2,8 @@ plugins {
     id 'fabric-loom' version '1.4.1'
 }
 
-githash = rootProject.getGitHash()
-
 base {
-    archivesName = project.modid + "-fabric" + githash
+    archivesName = project.modid + "-fabric" + rootProject.gitInfo
 }
 
 loom {
