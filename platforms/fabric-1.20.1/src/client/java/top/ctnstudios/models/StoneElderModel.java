@@ -9,7 +9,7 @@ import org.spongepowered.include.com.google.common.collect.ImmutableList;
 
 import top.ctnstudios.entities.StoneElderEntity;
 
-public class stone_elder extends EntityModel<StoneElderEntity> {
+public class StoneElderModel extends EntityModel<StoneElderEntity> {
     private final ModelPart stone_elder;
     private final ModelPart sbs;
     private final ModelPart t;
