@@ -3,7 +3,7 @@ plugins {
 }
 
 base {
-    archivesName = project.modid + "-fabric" + rootProject.gitInfo
+    archivesName = project.modid + "-fabric"
 }
 
 loom {

@@ -1,4 +1,4 @@
-// TODO: Use git hash in the jar name
+// TODO: Use git hash and branch in the jar name
 def getGitHash = { ->
     def stdout = new ByteArrayOutputStream()
     exec {
@@ -51,7 +51,4 @@ subprojects {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    def gitBranch = getGitBranch
-    def gitHash = getGitHash
-    def gitInfo = gitBranch  + gitHash
 }
