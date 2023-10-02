@@ -52,7 +52,7 @@ public class StoneElderModel extends EntityModel<StoneElderEntity> {
     private final ModelPart zx;
     private final ModelPart yst;
     private final ModelPart yx;
-    public stone_elder(ModelPart root) {
+    public StoneElderModel(ModelPart root) {
         this.stone_elder = root.getChild("stone_elder");
     }
     public static TexturedModelData getTexturedModelData() {
