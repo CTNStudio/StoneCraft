@@ -23,17 +23,8 @@ jobs:
         with:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
-      - name: set path
-        if: ${{ runner.os != 'Windows' }}
-        run: export GRADLE_USER_HOME="/home/runner/work/StoneCraft/StoneCraft/" 
-      - if: ${{ runner.os == 'Windows' }}
-        run: setx GRADLE_USER_HOME "/home/runner/work/StoneCraft/StoneCraft/"
       - name: build
-        run: ./gradlew configureClientLaunch
-      - name: build
-        run: ./gradlew configureLaunch
-      - name: build
-        run: ./gradlew downloadAssets
+        run: ./gradlew build
       - name: capture build artifacts
         if: ${{ runner.os != 'Windows' }}
         uses: actions/upload-artifact@v3
