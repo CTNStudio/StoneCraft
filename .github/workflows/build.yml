@@ -25,7 +25,7 @@ jobs:
           gradle-distribution-sha-256-sum-warning: false
       - name: set path
         if: ${{ runner.os != 'Windows' }}
-        run: sudo export GRADLE_USER_HOME="/home/runner/work/StoneCraft/StoneCraft/" 
+        run: export GRADLE_USER_HOME="/home/runner/work/StoneCraft/StoneCraft/" 
       - if: ${{ runner.os == 'Windows' }}
         run: setx GRADLE_USER_HOME "/home/runner/work/StoneCraft/StoneCraft/"
       - name: build
