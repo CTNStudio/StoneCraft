@@ -11,7 +11,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '21'
-        distribution: 'microsoft'
+        distribution: 'zulu'
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2.9.0
       with:
