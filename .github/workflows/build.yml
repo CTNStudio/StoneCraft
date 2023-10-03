@@ -35,6 +35,7 @@ jobs:
       - name: build
         run: ./gradlew downloadAssets
       - name: capture build artifacts
+        if: ${{ runner.os != 'Windows' }}
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
