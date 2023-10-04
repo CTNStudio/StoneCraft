@@ -19,9 +19,9 @@ tasks.register('build'){
     project('platforms:fabric-1.20.1').tasks.build
 
 }
-tasks.register('move-jar' type:Copy){
+tasks.register('move-jar', Copy) {
     from "${projectDir('platforms:fabric-1.20.1')}/build/libs"
-    into "${rootDir}"
+    into "${rootDir}/"
 }
 subprojects {
     apply plugin: 'java'
