@@ -25,6 +25,8 @@ jobs:
           gradle-distribution-sha-256-sum-warning: false
       - name: build
         run: ./gradlew build
+      - name: Move the jar
+        run: ./gradlew move-jar
       - name: capture build artifacts
         if: ${{ runner.os != 'Windows' }}
         uses: actions/upload-artifact@v3
