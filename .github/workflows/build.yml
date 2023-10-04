@@ -32,5 +32,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
-          # TODO Move jars
-          path: .
+          path: artifacts
