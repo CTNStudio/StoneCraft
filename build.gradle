@@ -17,11 +17,11 @@ def getGitBranch = { ->
 }
 tasks.register('build'){
     project('platforms:fabric-1.20.1').tasks.build
-
 }
 tasks.register('move-jar', Copy) {
+    mkdir "$rootDir/artifacts"
     from "$rootDir/platforms/fabric-1.20.1/build/libs"
-    into "$rootDir/"
+    into "$rootDir/artifacts"
 }
 subprojects {
     apply plugin: 'java'
