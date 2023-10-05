@@ -1,3 +1,8 @@
+plugins {
+    id "dev.architectury.loom" version "1.3.357" apply false
+    id 'idea'
+    id 'java'
+}
 // TODO: Use git hash and branch in the jar name
 def getGitHash = { ->
     def stdout = new ByteArrayOutputStream()
@@ -15,7 +20,7 @@ def getGitBranch = { ->
     }
     return stdout.toString().trim()
 }
-tasks.register('build'){
+tasks.register('build-all'){
     project('platforms:fabric-1.20.1').tasks.build
 }
 tasks.register('move-jar', Copy) {
@@ -24,8 +29,6 @@ tasks.register('move-jar', Copy) {
     into "$rootDir/artifacts"
 }
 subprojects {
-    apply plugin: 'java'
-    apply plugin: 'idea'
     tasks.withType(JavaCompile).configureEach {
         options.release.set 17
         options.encoding = 'UTF-8'
