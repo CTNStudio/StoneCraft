@@ -1,6 +1,10 @@
 apply plugin: "dev.architectury.loom"
 archivesBaseName = rootProject.mod_id
 
+repositories {
+    maven { url "https://maven.neoforged.net/releases/" }
+}
+
 loom {
     forge {
         mixinConfigs = [
