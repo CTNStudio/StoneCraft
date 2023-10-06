@@ -17,4 +17,4 @@ jobs:
       with:
        gradle-version: release-candidate
     - name: build
-      run: ./gradlew build
+      run: ./gradlew build --scan
