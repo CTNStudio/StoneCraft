@@ -96,7 +96,7 @@ public class Items {
     public static ToolItem LV4_STONE_SHOVEL =new ShovelItem(lv4ToolMaterial.INSTANCE,0,0.0F,new Item.Settings());
     public static ToolItem LV5_STONE_SHOVEL =new ShovelItem(lv5ToolMaterial.INSTANCE,1.5F,-3.0F,new Item.Settings());
     // Entity eggs
-    public static final Item STONE_ELDER_SPAWN_EGG = new SpawnEggItem(entities.STONE_ELDER, 0x000000, 0xffffff, new FabricItemSettings());
+    public static final Item STONE_ELDER_SPAWN_EGG = new SpawnEggItem(Entities.STONE_ELDER, 0x000000, 0xffffff, new FabricItemSettings());
     public static void init(){
         Registry.register(Registries.ITEM, new Identifier(MODID, "stone_star"), STONE_STAR);
         Registry.register(Registries.ITEM, new Identifier(MODID, "head_shard"), HEAD_SHARD);

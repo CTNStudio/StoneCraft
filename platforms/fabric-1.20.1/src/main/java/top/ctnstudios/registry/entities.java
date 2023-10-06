@@ -13,7 +13,7 @@ import static top.ctnstudios.StoneCraft.MODID;
 
 import top.ctnstudios.entities.StoneElderEntity;
 
-public class entities {
+public class Entities {
     public static final EntityType<StoneElderEntity> STONE_ELDER = Registry.register(
         Registries.ENTITY_TYPE,
         new Identifier(MODID, "stone_elder"),

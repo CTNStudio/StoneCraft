@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import top.ctnstudios.registry.Blocks;
+import top.ctnstudios.registry.Entities;
 import top.ctnstudios.registry.ItemGroups;
 import top.ctnstudios.registry.Items;
 
@@ -27,5 +28,6 @@ public class StoneCraft implements ModInitializer {
 		Blocks.init();
 		ItemGroups.init();
         Ores.init();
+        Entities.init();
 	}
 }

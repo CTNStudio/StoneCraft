@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import static top.ctnstudios.StoneCraft.MODID;
 
 import top.ctnstudios.models.StoneElderModel;
-import top.ctnstudios.registry.entities;
+import top.ctnstudios.registry.Entities;
 import top.ctnstudios.renderer.StoneElderRenderer;
 
 public class StoneCraftClient implements ClientModInitializer {
@@ -17,7 +17,7 @@ public class StoneCraftClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
         EntityRendererRegistry.register(
-            entities.STONE_ELDER, (context) -> {
+            Entities.STONE_ELDER, (context) -> {
             return new StoneElderRenderer(context);
         });
         EntityModelLayerRegistry.registerModelLayer(STONE_ELDER_LAYER, StoneElderModel::getTexturedModelData);
