@@ -1,11 +1,10 @@
 apply plugin: "dev.architectury.loom"
 base {
-    archivesName = project.modid + "-fabric"
+    archivesName = rootProject.modid + "-fabric"
 }
 
 loom {
     splitEnvironmentSourceSets()
-
     mods {
         "modid" {
             sourceSet sourceSets.main
@@ -16,13 +15,13 @@ loom {
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    modImplementation "maven.modrinth:Hephaestus:${project.Hephaestus_version}"
-    compileOnly "com.klikli_dev:modonomicon-${project.minecraft_version}-common:${project.modonomicon_version}"
-    implementation "com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}"
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:${rootProject.yarn_mappings_1201}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version_1201}"
+    modImplementation "maven.modrinth:Hephaestus:${rootProject.Hephaestus_version}"
+    compileOnly "com.klikli_dev:modonomicon-1.20.1-common:${rootProject.modonomicon_version}"
+    implementation "com.klikli_dev:modonomicon-1.20.1-fabric:${rootProject.modonomicon_version}"
 }
 
 processResources {

@@ -1,5 +1,7 @@
 apply plugin: "dev.architectury.loom"
-archivesBaseName = rootProject.mod_id
+base {
+    archivesName = rootProject.modid + "-forge"
+}
 
 repositories {
     maven { url "https://maven.neoforged.net/releases/" }
@@ -14,9 +16,9 @@ loom {
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    forge "net.neoforged:forge:${project.forge_version}"
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:${rootProject.yarn_mappings_1201}:v2"
+    forge "net.neoforged:forge:${rootProject.forge_version_1201}"
 }
 
 processResources {
@@ -33,12 +35,12 @@ java {
 jar {
     manifest {
         attributes([
-            "Specification-Title"     : rootProject.mod_id,
-            "Specification-Vendor"    : project.mod_author,
+            "Specification-Title"     : rootProject.modid,
+            "Specification-Vendor"    : "CTN STUDIO",
             "Specification-Version"   : "1",
             "Implementation-Title"    : rootProject.name,
-            "Implementation-Version"  : rootProject.version,
-            "Implementation-Vendor"   : project.mod_author,
+            "Implementation-Version"  : project.version,
+            "Implementation-Vendor"   : "CTN STUDIO",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
