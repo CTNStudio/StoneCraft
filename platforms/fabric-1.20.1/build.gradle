@@ -19,7 +19,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${rootProject.yarn_mappings_1201}:v2"
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version_1201}"
-    modImplementation "maven.modrinth:Hephaestus:${rootProject.Hephaestus_version}"
+    modImplementation "maven.modrinth:Hephaestus:${rootProject.Hephaestus_version_1201}"
     compileOnly "com.klikli_dev:modonomicon-1.20.1-common:${rootProject.modonomicon_version}"
     implementation "com.klikli_dev:modonomicon-1.20.1-fabric:${rootProject.modonomicon_version}"
 }
