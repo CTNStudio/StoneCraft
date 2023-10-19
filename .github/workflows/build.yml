@@ -23,7 +23,7 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - uses: burrunan/gradle-cache-action@2fdc863bcc9ce04960963b43d114102f1ef36423
+      - uses: burrunan/gradle-cache-action@v1
         with:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
