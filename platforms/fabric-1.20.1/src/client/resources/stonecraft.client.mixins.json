@@ -3,7 +3,6 @@
 	"package": "top.ctnstudios.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"StoneCraftClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

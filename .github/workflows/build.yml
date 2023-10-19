@@ -5,31 +5,52 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest,windows-latest,]
+        os: [ubuntu-latest,]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.1
+
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1.1.0
-      - name: setup jdk 17
-        uses: actions/setup-java@v3
+
+      - name: setup jdk 21
+        uses: actions/setup-java@78078da
         with:
-          java-version: 17
+          java-version: 21
           distribution: 'temurin'
+
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
-      - uses: burrunan/gradle-cache-action@v1
+
+      - uses: burrunan/gradle-cache-action@2fdc863bcc9ce04960963b43d114102f1ef36423
         with:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
+
       - name: build
         run: ./gradlew build
+
       - name: Move the jar
         run: ./gradlew move-jar
-      - name: capture build artifacts
-        if: ${{ runner.os != 'Windows' }}
-        uses: actions/upload-artifact@v3
+
+      - name: Generate version file
+        run: ./gradlew generate-version-file
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2.2.3
+
+      - name: Read mod version
+        id: mod_version
+        uses: juliangruber/read-file-action@cc341ded5e6547edbdf30bf7b4138a940433641b
         with:
-          name: Artifacts
+          path: ./temp/version-info
+
+      - name: capture build artifacts
+        uses: actions/upload-artifact@v3.1.3
+        with:
+          name: Stone Craft ${{ steps.mod_version.outputs.content }} beta
           path: artifacts
+
+      - name: Set latest tag
+        uses: EndBug/latest-tag@latest
