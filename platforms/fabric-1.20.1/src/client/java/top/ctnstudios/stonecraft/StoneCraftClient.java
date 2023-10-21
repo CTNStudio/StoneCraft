@@ -15,9 +15,7 @@ public class StoneCraftClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
         EntityRendererRegistry.register(
-            Entities.STONE_ELDER, (context) -> {
-            return new StoneElderRenderer(context);
-        });
+            Entities.STONE_ELDER, StoneElderRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(STONE_ELDER_LAYER, StoneElderModel::getTexturedModelData);
 	}
 }
