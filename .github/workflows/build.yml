@@ -56,7 +56,9 @@ jobs:
         uses: EndBug/latest-tag@latest
 
       - name: Remove assets
-        uses: RawDiamondMC/delete-releases-assets@v1
+        uses: RawDiamondMC/delete-release-assets@v1
+        with:
+          tag: latest
 
       - name: Release
         uses: softprops/action-gh-release@v1
