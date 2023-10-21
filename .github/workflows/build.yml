@@ -28,6 +28,8 @@ jobs:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
 
+      - run:  git tag
+
       - name: build
         run: ./gradlew build
 
