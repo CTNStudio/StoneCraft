@@ -40,9 +40,6 @@ jobs:
       - name: Generate version file
         run: ./gradlew generate-version-file
 
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2.2.3
-
       - name: Read mod version
         id: mod_version
         uses: juliangruber/read-file-action@cc341ded5e6547edbdf30bf7b4138a940433641b
