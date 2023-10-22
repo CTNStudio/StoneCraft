@@ -21,10 +21,10 @@ String getPatchVersion() {
         suffix = "-broken"
     }
     if (stdout.indexOf('-') < 0) {
-        return "0" + suffix
+        return "0" + suffix.replaceAll('"', '')
     }
     def split = stdout.split('-')
-    return split[split.length - 2] + suffix
+    return split[split.length - 2].replaceAll('"', '') + suffix.replaceAll('"', '')
 }
 
 afterEvaluate {

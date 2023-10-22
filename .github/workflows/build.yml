@@ -42,7 +42,7 @@ jobs:
 
       - name: Read mod version
         id: mod_version
-        uses: RawDiamondMC/read-file-action@9540ee2ebbc35264e9f2ce8db051c147d96d6e87
+        uses: juliangruber/read-file-action@cc341ded5e6547edbdf30bf7b4138a940433641b
         with:
           path: ./temp/version/version-info
 
