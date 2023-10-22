@@ -38,7 +38,7 @@ tasks.register('move-jar', Copy) {
 }
 
 tasks.register('generate-version-file') {
-    def content = project.mod_version + "." + getVersionSuffix()
+    def content = project.mod_version + "." + getPatchVersion()
     def file = file("./temp/version/version-info")
     file.parentFile.mkdirs()
     file.write(content)
