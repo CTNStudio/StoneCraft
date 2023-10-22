@@ -27,6 +27,10 @@ String getVersionSuffix() {
     return split[split.length - 2] + suffix
 }
 
+afterEvaluate {
+    logger.lifecycle("Version String: ${version}")
+}
+
 tasks.register('move-jar', Copy) {
     mkdir "$rootDir/artifacts"
     from "$rootDir/platforms/fabric-1.20.1/build/libs", "$rootDir/platforms/forge-1.20.1/build/libs"
