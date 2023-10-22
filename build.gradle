@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-String getVersionSuffix() {
+String getPatchVersion() {
     def stdout = new ByteArrayOutputStream()
     exec {
         commandLine 'git', 'describe', '--tags', '--dirty="-dev"', '--broken'
@@ -72,7 +72,7 @@ subprojects {
             url "https://maven.parchmentmc.org"
         }
     }
-    version = project.mod_version + "." + getVersionSuffix()
+    version = project.mod_version + "." + getPatchVersion()
     group = project.maven_group
     java {
         sourceCompatibility = JavaVersion.VERSION_17
