@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4.1.1
+        with:
+            fetch-tags: true
 
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1.1.0
@@ -27,8 +29,6 @@ jobs:
         with:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
-
-      - run: git describe --tags --dirty="-dev" --broken
 
       - name: build
         run: ./gradlew build
