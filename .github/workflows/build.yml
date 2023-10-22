@@ -44,7 +44,7 @@ jobs:
         id: mod_version
         uses: juliangruber/read-file-action@cc341ded5e6547edbdf30bf7b4138a940433641b
         with:
-          path: ./temp/version-info
+          path: ./temp/version/version-info
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3.1.3
