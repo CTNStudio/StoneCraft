@@ -31,8 +31,6 @@ jobs:
           gradle-version: wrapper
           gradle-distribution-sha-256-sum-warning: false
 
-      - run: git describe --tags --dirty="-dev" --broken
-
       - name: build
         run: ./gradlew build
 
