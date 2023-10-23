@@ -64,6 +64,7 @@ jobs:
         uses: RawDiamondMC/delete-release-assets@v1
         with:
           tag: latest
+          deleteOnlyFromDrafts: false
 
       - name: Release
         uses: softprops/action-gh-release@v1
