@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/CTNStudio/StoneCraft/issues"
+license = "EPL-2.0"
+
+[[mods]]
+modId = "stonecraft"
+version = "${version}"
+displayName = "Stone Craft"
+authors = "CTN STUDIO"
+description = '''
+WIP
+'''
+displayURL="https://github.com/CTNStudio/StoneCraft"
+logoFile = "icon.png"
+
+[[dependencies.stonecraft]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.stonecraft]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"

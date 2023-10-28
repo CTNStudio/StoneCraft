@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "mixin": [
+    "stonecraft.mixins.json",
+    "stonecraft-common.mixins.json"
+  ],
+  "quilt_loader": {
+    "group": "top.ctnstudios",
+    "id": "stonecraft",
+    "version": "${version}",
+    "metadata": {
+      "name": "Stone Craft",
+      "description": "WIP",
+      "contributors": {
+        "CTN STUDIO": "Owner"
+      },
+      "contact": {
+        "homepage": "https://www.mcmod.cn/class/9862.html",
+        "sources": "https://github.com/CTNStudio/StoneCraft",
+        "issues": "https://github.com/CTNStudio/StoneCraft/issues"
+      },
+      "icon": "assets/stonecraft/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": [
+        "top.ctnstudios.stonecraft.quilt.StoneCraftQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": ">=0.20.0"
+      },
+      {
+        "id": "quilted_fabric_api",
+        "version": ">=7.3.1+0.89.3-1.20.1"
+      },
+      {
+        "id": "minecraft",
+        "version": "~1.20.0"
+      }
+    ]
+  },
+  "minecraft": {
+    "environment": "*"
+  }
+}

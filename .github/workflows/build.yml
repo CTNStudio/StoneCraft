@@ -40,21 +40,10 @@ jobs:
       - name: Move the jar
         run: ./gradlew move-jar
 
-      - name: Generate version file
-        run: ./gradlew generate-version-file
-
-      - name: Read mod version
-        id: mod_version
-        uses: juliangruber/read-file-action@cc341ded5e6547edbdf30bf7b4138a940433641b
-        with:
-          path: ./temp/version/version-info
-
-      - run: echo ${{ steps.mod_version.outputs.content }}
-
       - name: capture build artifacts
         uses: actions/upload-artifact@v3.1.3
         with:
-          name: Stone Craft ${{ steps.mod_version.outputs.content }} beta
+          name: Stone Craft beta
           path: artifacts
 
       - name: Set latest tag

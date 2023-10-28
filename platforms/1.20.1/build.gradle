@@ -1,0 +1,36 @@
+plugins {
+    id "architectury-plugin" version "3.4.146"
+    id "dev.architectury.loom" version "1.4.359" apply false
+}
+
+architectury {
+    minecraft = "1.20.1"
+}
+
+subprojects {
+    apply plugin: "dev.architectury.loom"
+
+    dependencies {
+        minecraft "com.mojang:minecraft:1.20.1"
+        mappings(loom.layered {
+            it.mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+        })
+    }
+}
+
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+
+    def patchVersion = rootProject.getPatchVersion()
+    version = project.mod_version + patchVersion
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        options.release = 17
+    }
+
+    java {
+        withSourcesJar()
+    }
+}
