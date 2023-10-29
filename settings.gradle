@@ -1,14 +1,17 @@
 pluginManagement {
     repositories {
+        maven { url 'https://maven.fabricmc.net/' }
+        maven { url 'https://maven.architectury.dev/' }
+        maven { url 'https://files.minecraftforge.net/maven/' }
         gradlePluginPortal()
     }
 }
 
-include(":platforms:1.20.1")
-include(":platforms:1.20.1:common")
-include(":platforms:1.20.1:fabric")
-include(":platforms:1.20.1:fabric-like")
-include(":platforms:1.20.1:forge")
-include(":platforms:1.20.1:quilt")
+include ':platforms:1.20.1'
+include ':platforms:1.20.1:common'
+include ':platforms:1.20.1:fabric'
+include ':platforms:1.20.1:fabric-like'
+include ':platforms:1.20.1:forge'
+include ':platforms:1.20.1:quilt'
 
-rootProject.name = "StoneCraft"
+rootProject.name = 'StoneCraft'

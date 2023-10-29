@@ -1,14 +1,5 @@
-pluginManagement {
-    repositories {
-        maven { url "https://maven.fabricmc.net/" }
-        maven { url "https://maven.architectury.dev/" }
-        maven { url "https://files.minecraftforge.net/maven/" }
-        gradlePluginPortal()
-    }
-}
-
-include(":common")
-include(":fabric")
-include(":fabric-like")
-include(":forge")
-include(":quilt")
+include ':common'
+include ':fabric'
+include ':fabric-like'
+include ':forge'
+include ':quilt'

@@ -1,29 +1,5 @@
 plugins {
     id 'idea'
-    id 'java'
-}
-
-String getPatchVersion() {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'describe', '--tags', '--dirty="-dev"', '--broken'
-        standardOutput = stdout
-    }
-    stdout = stdout.toString().strip()
-    def suffix = ""
-    if (stdout.endsWith("-dev")) {
-        stdout = stdout.substring(0, stdout.length() - "-dev".length())
-        suffix = "-dev"
-    }
-    if (stdout.endsWith("-broken")) {
-        stdout = stdout.substring(0, stdout.length() - "-broken".length())
-        suffix = "-broken"
-    }
-    if (stdout.indexOf('-') < 0) {
-        return "0" + suffix.replaceAll('"', '')
-    }
-    def split = stdout.split('-')
-    return split[split.length - 2].replaceAll('"', '') + suffix.replaceAll('"', '')
 }
 
 tasks.register('move-jar', Copy) {
@@ -33,25 +9,5 @@ tasks.register('move-jar', Copy) {
 }
 
 subprojects {
-    repositories {
-        maven {
-            url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
-            content {
-                includeGroup "com.klikli_dev"
-            }
-        }
-        maven {
-            url "https://maven.blamejared.com/"
-            content {
-                includeGroup "mezz.jei"
-            }
-        }
-        maven {
-            url "https://api.modrinth.com/maven"
-            content {
-                includeGroup "maven.modrinth"
-            }
-        }
-    }
     group = project.maven_group
 }

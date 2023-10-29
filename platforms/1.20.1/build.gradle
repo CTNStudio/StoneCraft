@@ -20,8 +20,7 @@ allprojects {
     apply plugin: 'java'
     apply plugin: 'architectury-plugin'
 
-    def patchVersion = rootProject.getPatchVersion()
-    version = project.mod_version + patchVersion
+    version = project.mod_version
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
