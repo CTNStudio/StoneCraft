@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "stonecraft:block/deepslate_stone_essence_ore"
-  }
-}

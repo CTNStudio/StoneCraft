@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#stonecraft:stone_essence_ores",
-      "required": false
-    }
-  ]
-}
