@@ -53,7 +53,7 @@ remapJar {
 sourcesJar {
     def commonSources = project(':platforms:1.20.1:common').sourcesJar
     dependsOn commonSources
-    from commonSources.archiveFile.map { zipTree(it) }
+    from commonSources.archiveFile.map { zipTree it }
 }
 
 components.java {

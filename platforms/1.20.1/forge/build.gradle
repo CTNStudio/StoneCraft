@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "8.1.1"
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 architectury {
@@ -8,14 +8,14 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    accessWidenerPath = project(':platforms:1.20.1:common').loom.accessWidenerPath
 
     forge {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig "stonecraft-common.mixins.json"
-        mixinConfig "stonecraft.mixins.json
+        mixinConfig 'stonecraft-common.mixins.json'
+        mixinConfig 'stonecraft.mixins.json'
     }
 }
 
@@ -28,26 +28,26 @@ configurations {
 }
 
 dependencies {
-    forge "net.neoforged:forge:${parent.forge_version}"
+    forge "net.neoforged:forge:$parent.forge_version"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    common(project(path: ':platforms:1.20.1:common', configuration: 'namedElements')) { transitive false }
+    shadowCommon(project(path: ':platforms:1.20.1:common', configuration: 'transformProductionForge')) { transitive = false }
 }
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property 'version', project.version
 
-    filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.version
     }
 }
 
 shadowJar {
-    exclude "fabric.mod.json"
-    exclude "architectury.common.json"
+    exclude 'fabric.mod.json'
+    exclude 'architectury.common.json'
 
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
+    archiveClassifier = 'dev-shadow'
 }
 
 remapJar {
@@ -56,9 +56,9 @@ remapJar {
 }
 
 sourcesJar {
-    def commonSources = project(":common").sourcesJar
+    def commonSources = project(':platforms:1.20.1:common').sourcesJar
     dependsOn commonSources
-    from commonSources.archiveFile.map { zipTree(it) }
+    from commonSources.archiveFile.map { zipTree it }
 }
 
 components.java {

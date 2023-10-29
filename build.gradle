@@ -28,7 +28,7 @@ String getPatchVersion() {
 
 tasks.register('move-jar', Copy) {
     mkdir "$rootDir/artifacts"
-    from "$rootDir/platforms/fabric-1.20.1/build/libs", "$rootDir/platforms/forge-1.20.1/build/libs"
+    from "$rootDir/platforms/1.20.1/build/libs"
     into "$rootDir/artifacts"
 }
 
@@ -51,9 +51,6 @@ subprojects {
             content {
                 includeGroup "maven.modrinth"
             }
-        }
-        maven {
-            url "https://maven.parchmentmc.org"
         }
     }
     group = project.maven_group

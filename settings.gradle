@@ -8,11 +8,11 @@ pluginManagement {
     }
 }
 
-include("platforms:1.20.1")
-include("platforms:1.20.1:common")
-include("platforms:1.20.1:fabric")
-include("platforms:1.20.1:fabric-like")
-include("platforms:1.20.1:forge")
-include("platforms:1.20.1:quilt")
+include(":platforms:1.20.1")
+include(":platforms:1.20.1:common")
+include(":platforms:1.20.1:fabric")
+include(":platforms:1.20.1:fabric-like")
+include(":platforms:1.20.1:forge")
+include(":platforms:1.20.1:quilt")
 
 rootProject.name = "StoneCraft"

@@ -41,4 +41,5 @@ replay_*.log
 
 artifacts
 
-temp
+platforms/fabric-1.20.1/
+platforms/forge-1.20.1/

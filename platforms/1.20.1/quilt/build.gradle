@@ -1,14 +1,14 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "8.1.1"
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 architectury {
     platformSetupLoomIde()
-    loader("quilt")
+    loader 'quilt'
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    accessWidenerPath = project(':platforms:1.20.1:common').loom.accessWidenerPath
 }
 
 configurations {
@@ -20,29 +20,29 @@ configurations {
 }
 
 dependencies {
-    modImplementation "org.quiltmc:quilt-loader:${parent.quilt_loader_version}"
-    modApi "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${parent.quilt_fabric_api_version}"
-    modApi "org.quiltmc:qsl${parent.qsl_version}:
+    modImplementation "org.quiltmc:quilt-loader:$parent.quilt_loader_version"
+    modApi "org.quiltmc.quilted-fabric-api:quilted-fabric-api:$parent.quilt_fabric_api_version"
+    modApi "org.quiltmc:qsl$parent.qsl_version"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionQuilt")) { transitive false }
-    common(project(path: ":fabric-like", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":fabric-like", configuration: "transformProductionQuilt")) { transitive false }
+    common(project(path: ':platforms:1.20.1:common', configuration: 'namedElements')) { transitive false }
+    shadowCommon(project(path: ':platforms:1.20.1:common', configuration: 'transformProductionQuilt')) { transitive false }
+    common(project(path: ':platforms:1.20.1:fabric-like', configuration: 'namedElements')) { transitive false }
+    shadowCommon(project(path: ':platforms:1.20.1:fabric-like', configuration: 'transformProductionQuilt')) { transitive false }
 }
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property 'version', project.version
 
-    filesMatching("quilt.mod.json") {
-        expand "version": project.version
+    filesMatching('quilt.mod.json') {
+        expand 'version': project.version
     }
 }
 
 shadowJar {
-    exclude "architectury.common.json"
+    exclude 'architectury.common.json'
 
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
+    archiveClassifier = 'dev-shadow'
 }
 
 remapJar {
@@ -52,9 +52,9 @@ remapJar {
 }
 
 sourcesJar {
-    def commonSources = project(":common").sourcesJar
+    def commonSources = project(':platforms:1.20.1:common').sourcesJar
     dependsOn commonSources
-    from commonSources.archiveFile.map { zipTree(it) }
+    from commonSources.archiveFile.map { zipTree it }
 }
 
 components.java {
