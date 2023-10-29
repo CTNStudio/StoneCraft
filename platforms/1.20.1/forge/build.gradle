@@ -27,6 +27,10 @@ configurations {
     developmentForge.extendsFrom common
 }
 
+repositories {
+    maven { url "https://maven.neoforged.net/releases/" }
+}
+
 dependencies {
     forge "net.neoforged:forge:$parent.forge_version"
 

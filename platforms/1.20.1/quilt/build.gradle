@@ -45,6 +45,10 @@ shadowJar {
     archiveClassifier = 'dev-shadow'
 }
 
+repositories {
+    maven { url "https://maven.quiltmc.org/repository/release/" }
+}
+
 remapJar {
     injectAccessWidener = true
     input.set shadowJar.archiveFile
