@@ -1,3 +1,5 @@
+version="$parent.mod_version"
+
 architectury {
     common parent.enabled_platforms.split(',')
 }

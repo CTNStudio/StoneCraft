@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "stonecraft:block/activated_stone_summoner" }
+  }
+}

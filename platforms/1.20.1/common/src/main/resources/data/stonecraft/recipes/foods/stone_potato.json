@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_potato",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "stonecraft:lv2stone"
+    },
+    "$": {
+      "item": "minecraft:potato"
+    }
+  },
+  "result": {
+    "item": "stonecraft:stone_potato",
+    "count": 1
+  }
+}

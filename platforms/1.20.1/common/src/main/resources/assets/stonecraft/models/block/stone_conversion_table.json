@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "stonecraft:block/stone_conversion_table_down",
+    "east": "stonecraft:block/stone_conversion_table_side",
+    "north": "stonecraft:block/stone_conversion_table_front",
+    "particle": "stonecraft:block/stone_conversion_table_front",
+    "south": "stonecraft:block/stone_conversion_table_side",
+    "up": "stonecraft:block/stone_conversion_table_top",
+    "west": "stonecraft:block/stone_conversion_table_front"
+  }
+}

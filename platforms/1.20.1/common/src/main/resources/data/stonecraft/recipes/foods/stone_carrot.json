@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_carrot",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "stonecraft:lv2stone"
+    },
+    "$": {
+      "item": "minecraft:carrot"
+    }
+  },
+  "result": {
+    "item": "stonecraft:stone_carrot",
+    "count": 1
+  }
+}

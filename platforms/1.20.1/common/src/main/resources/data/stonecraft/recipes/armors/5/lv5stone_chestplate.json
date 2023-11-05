@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lv5stone_chestplate",
+  "pattern": [
+    "C C",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "stonecraft:lv5stone"
+    },
+    "B": {
+      "item": "stonecraft:stone_star"
+    },
+    "C": {
+      "item": "stonecraft:stone_essence"
+    }
+  },
+  "result": {
+    "item": "stonecraft:lv5stone_chestplate",
+    "count": 1
+  }
+}

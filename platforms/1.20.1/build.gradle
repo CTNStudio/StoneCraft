@@ -1,10 +1,20 @@
 plugins {
     id 'architectury-plugin' version '3.4.146'
-    id 'dev.architectury.loom' version '1.4.359' apply false
+    id 'dev.architectury.loom' version '1.4.361' apply false
 }
+
+version = "$project.mod_version"
 
 architectury {
     minecraft = '1.20.1'
+}
+
+tasks.register('move-jar', Copy) {
+    //mkdir "$rootDir/artifacts"
+    from "$rootDir/platforms/1.20.1/forge/build/libs"
+    from "$rootDir/platforms/1.20.1/fabric/build/libs"
+    from "$rootDir/platforms/1.20.1/quilt/build/libs"
+    into "$rootDir/artifacts/1.20.1"
 }
 
 subprojects {
@@ -14,13 +24,18 @@ subprojects {
         minecraft 'com.mojang:minecraft:1.20.1'
         mappings "net.fabricmc:yarn:$project.yarn_mappings:v2"
     }
+    repositories {
+        maven { url = 'https://maven.resourcefulbees.com/repository/maven-public/' }
+    }
 }
 
 allprojects {
     apply plugin: 'java'
     apply plugin: 'architectury-plugin'
 
-    version = project.mod_version
+    base {
+        archivesName = 'stonecraft-1.20.1'
+    }
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'

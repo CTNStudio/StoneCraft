@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lv4stone_boots",
+  "pattern": [
+    "A A",
+    "B B"
+  ],
+  "key": {
+    "A": {
+      "item": "stonecraft:lv4stone"
+    },
+    "B": {
+      "item": "stonecraft:stone_essence"
+    }
+  },
+  "result": {
+    "item": "stonecraft:lv4stone_boots",
+    "count": 1
+  }
+}

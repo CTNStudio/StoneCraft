@@ -35,6 +35,9 @@ jobs:
           gradle-distribution-sha-256-sum-warning: false
 
       - name: build
+        run: ./gradlew cleanBuildFolders
+
+      - name: build
         run: ./gradlew build
 
       - name: Move the jar

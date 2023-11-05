@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "stone_coin",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": "stonecraft:stone_coin",
+  "count": 4
+}

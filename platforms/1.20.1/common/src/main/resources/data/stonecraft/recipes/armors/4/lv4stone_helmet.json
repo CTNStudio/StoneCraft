@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "lv4stone_helmet",
+  "pattern": [
+    "ABA",
+    "C C"
+  ],
+  "key": {
+    "A": {
+      "item": "stonecraft:lv4stone"
+    },
+    "B": {
+      "item": "stonecraft:stone_star"
+    },
+    "C": {
+      "item": "stonecraft:stone_essence"
+    }
+  },
+  "result": {
+    "item": "stonecraft:lv4stone_helmet",
+    "count": 1
+  }
+}

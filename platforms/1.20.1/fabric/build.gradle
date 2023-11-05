@@ -2,6 +2,8 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
+version="$parent.mod_version" + "-fabric.$parent.fabric_patch_version"
+
 architectury {
     platformSetupLoomIde()
     fabric()

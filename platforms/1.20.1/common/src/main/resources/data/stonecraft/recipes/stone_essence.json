@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "stone_essence",
+  "ingredients": [
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    },
+    {
+      "item": "stonecraft:stone_essence_nugget"
+    }
+  ],
+  "result": {
+    "item": "stonecraft:stone_essence",
+    "count": 1
+  }
+}

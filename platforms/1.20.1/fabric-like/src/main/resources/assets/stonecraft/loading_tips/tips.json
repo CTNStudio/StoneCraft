@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "tips": [
+    "text.stonecraft.tip.bug",
+    "text.stonecraft.tip.bilibili",
+    "text.stonecraft.tip.guess_next_time",
+    "text.stonecraft.tip.mcmod",
+    "text.stonecraft.tip.who_will_see_these"
+  ]
+}

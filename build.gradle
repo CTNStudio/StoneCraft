@@ -2,10 +2,13 @@ plugins {
     id 'idea'
 }
 
-tasks.register('move-jar', Copy) {
-    mkdir "$rootDir/artifacts"
-    from "$rootDir/platforms/1.20.1/build/libs"
-    into "$rootDir/artifacts"
+tasks.register('cleanBuildFolders') {
+    doLast {
+        delete "$rootDir/artifacts"
+        subprojects { subproject ->
+            delete "$subproject.projectDir/build"
+        }
+    }
 }
 
 subprojects {

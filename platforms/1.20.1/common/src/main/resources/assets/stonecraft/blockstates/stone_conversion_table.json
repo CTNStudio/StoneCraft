@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "stonecraft:block/stone_conversion_table" }
+  }
+}
