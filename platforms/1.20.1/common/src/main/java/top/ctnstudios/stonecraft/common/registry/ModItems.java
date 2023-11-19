@@ -7,17 +7,13 @@ import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 import top.ctnstudios.stonecraft.StoneCraft;
 import top.ctnstudios.stonecraft.api.CanClearBadEffects;
+import top.ctnstudios.stonecraft.common.item.ArmorMaterials.*;
 import top.ctnstudios.stonecraft.common.item.ToolMaterials.*;
 import top.ctnstudios.stonecraft.common.item.tools.AxeItem;
 import top.ctnstudios.stonecraft.common.item.tools.HoeItem;
@@ -59,6 +55,9 @@ public class ModItems {
     public static final RegistryEntry<Item> ACTIVE_STONE_ESSENCE = ITEMS.register("activated_stone_essence",
         () -> new Item(new Item.Settings()
             .maxCount(64)));
+    public static final RegistryEntry<Item> STONE_ENCYCLOPEDIA = ITEMS.register("stone_encyclopedia",
+        () -> new Item(new Item.Settings()
+            .maxCount(1)));
     public static final RegistryEntry<CanClearBadEffects> STONE_APPLE = ITEMS.register("stone_apple",
         () -> new CanClearBadEffects(new Item.Settings().food(new FoodComponent.Builder()
             .hunger(4)
@@ -196,6 +195,15 @@ public class ModItems {
     public static final RegistryEntry<Item> LV5_STONE_SWORD = ITEMS.register("lv5stone_sword", () -> new SwordItem(
         lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
     );
+    public static final RegistryEntry<Item> UC1_STONE_SWORD = ITEMS.register("uc1stone_sword", () -> new SwordItem(
+        lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
+    );
+    public static final RegistryEntry<Item> UC2_STONE_SWORD = ITEMS.register("uc2stone_sword", () -> new SwordItem(
+        lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
+    );
+    public static final RegistryEntry<Item> UC3_STONE_SWORD = ITEMS.register("uc3stone_sword", () -> new SwordItem(
+        lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
+    );
     public static final RegistryEntry<Item> LV1_STONE_PICKAXE = ITEMS.register("lv1stone_pickaxe", () -> new PickaxeItem(
         lv1ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
     );
@@ -241,6 +249,54 @@ public class ModItems {
     public static final RegistryEntry<Item> LV5_STONE_HOE = ITEMS.register("lv5stone_hoe", () -> new HoeItem(
         lv5ToolMaterial.INSTANCE, -5, 0.0F, new Item.Settings())
     );
+    public static final RegistryEntry<Item> LV0_STONE_HELMET = ITEMS.register("stone_helmet", () -> new ArmorItem(
+        new lv0ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV0_STONE_CHESTPLATE = ITEMS.register("stone_chestplate", () -> new ArmorItem(
+        new lv0ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV0_STONE_LEGGINGS = ITEMS.register("stone_leggings", () -> new ArmorItem(
+        new lv0ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV0_STONE_BOOTS = ITEMS.register("stone_boots", () -> new ArmorItem(
+        new lv0ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV1_STONE_HELMET = ITEMS.register("lv1stone_helmet", () -> new ArmorItem(
+        new lv1ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV1_STONE_CHESTPLATE = ITEMS.register("lv1stone_chestplate", () -> new ArmorItem(
+        new lv1ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV1_STONE_LEGGINGS = ITEMS.register("lv1stone_leggings", () -> new ArmorItem(
+        new lv1ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV1_STONE_BOOTS = ITEMS.register("lv1stone_boots", () -> new ArmorItem(
+        new lv1ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV2_STONE_HELMET = ITEMS.register("lv2stone_helmet", () -> new ArmorItem(
+        new lv2ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV2_STONE_CHESTPLATE = ITEMS.register("lv2stone_chestplate", () -> new ArmorItem(
+        new lv2ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV2_STONE_LEGGINGS = ITEMS.register("lv2stone_leggings", () -> new ArmorItem(
+        new lv2ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV2_STONE_BOOTS = ITEMS.register("lv2stone_boots", () -> new ArmorItem(
+        new lv2ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV3_STONE_HELMET = ITEMS.register("lv3stone_helmet", () -> new ArmorItem(
+        new lv3ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV3_STONE_CHESTPLATE = ITEMS.register("lv3stone_chestplate", () -> new ArmorItem(
+        new lv3ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV3_STONE_LEGGINGS = ITEMS.register("lv3stone_leggings", () -> new ArmorItem(
+        new lv3ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV3_STONE_BOOTS = ITEMS.register("lv3stone_boots", () -> new ArmorItem(
+        new lv3ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV4_STONE_HELMET = ITEMS.register("lv4stone_helmet", () -> new ArmorItem(
+        new lv4ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV4_STONE_CHESTPLATE = ITEMS.register("lv4stone_chestplate", () -> new ArmorItem(
+        new lv4ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV4_STONE_LEGGINGS = ITEMS.register("lv4stone_leggings", () -> new ArmorItem(
+        new lv4ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV4_STONE_BOOTS = ITEMS.register("lv4stone_boots", () -> new ArmorItem(
+        new lv4ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV5_STONE_HELMET = ITEMS.register("lv5stone_helmet", () -> new ArmorItem(
+        new lv5ArmorMaterial(), ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RegistryEntry<Item> LV5_STONE_CHESTPLATE = ITEMS.register("lv5stone_chestplate", () -> new ArmorItem(
+        new lv5ArmorMaterial(), ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RegistryEntry<Item> LV5_STONE_LEGGINGS = ITEMS.register("lv5stone_leggings", () -> new ArmorItem(
+        new lv5ArmorMaterial(), ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RegistryEntry<Item> LV5_STONE_BOOTS = ITEMS.register("lv5stone_boots", () -> new ArmorItem(
+        new lv5ArmorMaterial(), ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final Supplier<ItemGroup> TABS = new ResourcefulCreativeTab(new Identifier(StoneCraft.MODID, "main"))
         .setItemIcon(STONE_STAR)
         .addRegistry(ITEMS)

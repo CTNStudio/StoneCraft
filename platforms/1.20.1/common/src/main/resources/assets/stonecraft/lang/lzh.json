@@ -58,5 +58,10 @@
   "item.stonecraft.lv2stone_pickaxe": "Compressed Stone Pickaxe Level 2",
   "item.stonecraft.lv3stone_pickaxe": "Compressed Stone Pickaxe Level 3",
   "item.stonecraft.lv4stone_pickaxe": "Compressed Stone Pickaxe Level 4",
-  "item.stonecraft.lv5stone_pickaxe": "Compressed Stone Pickaxe Level 5"
+  "item.stonecraft.lv5stone_pickaxe": "Compressed Stone Pickaxe Level 5",
+  "text.stonecraft.tip.bug": "[Stone Craft]Create issues to help me find the bugs!",
+  "text.stonecraft.tip.bilibili": "[Stone Craft]Welcome to scribe my bilibili account! UID:1902303091",
+  "text.stonecraft.tip.guess_next_time": "Let's guess when you will see this tip again.",
+  "text.stonecraft.tip.mcmod": "[Stone Craft] Don't know what to do? Go to mcmod.cn(Chinese)，Searching for Stone Craft!",
+  "text.stonecraft.tip.who_will_see_these": "Who will see these tips?"
 }
