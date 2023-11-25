@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "stone_conversion_table",
+  "group": "stone_convert_table",
   "pattern": [
     "###",
     "#$#",
@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "stonecraft:stone_conversion_table",
+    "item": "stonecraft:stone_convert_table",
     "count": 1
   }
 }

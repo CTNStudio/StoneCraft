@@ -195,7 +195,7 @@ public class ModItems {
     public static final RegistryEntry<Item> LV5_STONE_SWORD = ITEMS.register("lv5stone_sword", () -> new SwordItem(
         lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
     );
-    public static final RegistryEntry<Item> UC1_STONE_SWORD = ITEMS.register("uc1stone_sword", () -> new SwordItem(
+    public static final RegistryEntry<Item> UC1_STONE_SWORD = ITEMS.register("uc_stone_sword", () -> new SwordItem(
         lv5ToolMaterial.INSTANCE, 3, -2.4F, new Item.Settings())
     );
     public static final RegistryEntry<Item> UC2_STONE_SWORD = ITEMS.register("uc2stone_sword", () -> new SwordItem(

@@ -1,8 +1,6 @@
 {
   "schema_version": 1,
   "mixin": [
-    "stonecraft.mixins.json",
-    "stonecraft-common.mixins.json"
   ],
   "quilt_loader": {
     "group": "top.ctnstudios",

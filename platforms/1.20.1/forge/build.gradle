@@ -15,9 +15,6 @@ loom {
     forge {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
-        mixinConfig 'stonecraft-common.mixins.json'
-        mixinConfig 'stonecraft.mixins.json'
     }
 }
 
