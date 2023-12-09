@@ -1,6 +1,6 @@
 plugins {
     id 'architectury-plugin' version '3.4.151'
-    id 'dev.architectury.loom' version '1.4.368' apply false
+    id 'dev.architectury.loom' version '1.4.369' apply false
 }
 
 version = "$project.mod_version"
