@@ -3,5 +3,5 @@
   "extends": [
     "config:base"
   ],
-  "ignoreDeps": ["net.fabricmc:yarn"]
+  "ignoreDeps": ["net.fabricmc:yarn","architectury-plugin","dev.architectury.loom"]
 }
