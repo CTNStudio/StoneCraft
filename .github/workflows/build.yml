@@ -35,13 +35,7 @@ jobs:
           gradle-distribution-sha-256-sum-warning: false
 
       - name: build
-        run: ./gradlew cleanBuildFolders
-
-      - name: build
         run: ./gradlew build
-
-      - name: Move the jar
-        run: ./gradlew move-jar
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3.1.3
