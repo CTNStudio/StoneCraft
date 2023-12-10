@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "top.ctnstudios.stonecraft.MainFabric"
     ]
   },
   "depends": {
