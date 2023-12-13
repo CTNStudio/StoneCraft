@@ -1,10 +1,10 @@
 package top.ctnstudios.stonecraft.init;
 
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.recipe.Ingredient;
 
-public enum MaterialTool implements Tier {
+public enum MaterialTool implements ToolMaterial {
     STONE_LV_1(175, 5.0f, 1.5f, 1, 7, ItemInit.LV1STONE.get()),
     STONE_LV_2(227, 5.0f, 1.5f, 1, 7, ItemInit.LV2STONE.get()),
     STONE_LV_3(1550, 6.0f, 2.5f, 1, 6, ItemInit.LV3STONE.get()),
@@ -17,9 +17,9 @@ public enum MaterialTool implements Tier {
     private final float damage;
     private final int lv;
     private final int enchantmentValue;
-    private final ItemLike[] items;
+    private final ItemConvertible[] items;
 
-    MaterialTool(int durability, float speed, float damage, int lv, int enchantmentValue, ItemLike ... items) {
+    MaterialTool(int durability, float speed, float damage, int lv, int enchantmentValue, ItemConvertible ... items) {
         this.durability = durability;
         this.speed = speed;
         this.damage = damage;
@@ -29,32 +29,32 @@ public enum MaterialTool implements Tier {
     }
 
     @Override
-    public int getUses() {
+    public int getDurability() {
         return durability;
     }
 
     @Override
-    public float getSpeed() {
+    public float getMiningSpeedMultiplier() {
         return speed;
     }
 
     @Override
-    public float getAttackDamageBonus() {
+    public float getAttackDamage() {
         return damage;
     }
 
     @Override
-    public int getLevel() {
+    public int getMiningLevel() {
         return lv;
     }
 
     @Override
-    public int getEnchantmentValue() {
+    public int getEnchantability() {
         return enchantmentValue;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.of(items);
+        return Ingredient.ofItems(items);
     }
 }

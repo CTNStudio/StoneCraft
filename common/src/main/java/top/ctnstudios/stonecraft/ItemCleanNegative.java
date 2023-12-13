@@ -1,46 +1,45 @@
 package top.ctnstudios.stonecraft;
 
 import com.google.common.collect.Sets;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import top.ctnstudios.stonecraft.MainCommon;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import java.util.Set;
 
 public class ItemCleanNegative extends Item {
-    private final Set<MobEffectInstance> effects;
+    private final Set<StatusEffectInstance> effects;
 
-    public ItemCleanNegative(int hunger, float saturation, MobEffectInstance ... effects) {
-        super(new Item.Properties().arch$tab(MainCommon.STONE_CRAFT_TABS).food(
-                new FoodProperties.Builder()
-                        .nutrition(hunger)
-                        .saturationMod(saturation)
-                        .alwaysEat()
+    public ItemCleanNegative(int hunger, float saturation, StatusEffectInstance ... effects) {
+        super(new Item.Settings().arch$tab(MainCommon.STONE_CRAFT_TABS).food(
+                new FoodComponent.Builder()
+                        .hunger(hunger)
+                        .saturationModifier(saturation)
+                        .alwaysEdible()
                         .build()
         ));
 
         this.effects = Sets.newHashSet(effects);
     }
     @Override
-    public ItemStack finishUsingItem(ItemStack item, Level world, LivingEntity user) {
-        if (user instanceof Player player) {
-            player.getActiveEffects().forEach((effect) -> checkAndCleanNegativeEffectInstance(player, effect.getEffect()));
-            effects.forEach((effect) -> player.addEffect(effect));
+    public ItemStack finishUsing(ItemStack item, World world, LivingEntity user) {
+        if (user instanceof PlayerEntity player) {
+            player.getStatusEffects().forEach((effect) -> checkAndCleanNegativeEffectInstance(player, effect.getEffectType()));
+            effects.forEach((effect) -> player.addStatusEffect(effect));
         }
 
-        return super.finishUsingItem(item, world, user);
+        return super.finishUsing(item, world, user);
     }
 
-    private void checkAndCleanNegativeEffectInstance(Player player, MobEffect effect) {
-        if (effect.getCategory() == MobEffectCategory.HARMFUL) {
-            player.removeEffect(effect);
+    private void checkAndCleanNegativeEffectInstance(PlayerEntity player, StatusEffect effect) {
+        if (effect.getCategory() == StatusEffectCategory.HARMFUL) {
+            player.removeStatusEffect(effect);
         }
     }
 }
